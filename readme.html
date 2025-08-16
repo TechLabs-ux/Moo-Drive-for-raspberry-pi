@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moo Drive - Seu Drive na Rede</title>
+    <style>
+        :root {
+            --primary: #919191;
+            --secondary: #696969;
+            --dark: #2d3436;
+            --light: #f5f6fa;
+            --success: #00b894;
+            --warning: #fdcb6e;
+            --danger: #d63031;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            color: var(--light);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin: 10px 0;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .feature {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        code {
+            background: #252525;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        pre {
+            background: #2d3436;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        
+        .env-vars {
+            background: #f8f9fa;
+            border-left: 4px solid var(--primary);
+            padding: 10px 15px;
+            margin: 15px 0;
+        }
+        
+        .env-var {
+            display: flex;
+            margin-bottom: 5px;
+        }
+        
+        .env-var-name {
+            font-weight: bold;
+            min-width: 150px;
+        }
+        
+        .steps {
+            counter-reset: step-counter;
+        }
+        
+        .step {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .step:before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: var(--primary);
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Moo Drive</h1>
+        <div class="tagline">Seu Drive na Rede</div>
+    </div>
+    
+    <p>Moo Drive é um serviço de armazenamento em nuvem pessoal que permite você armazenar, gerenciar e compartilhar seus arquivos de forma fácil e segura diretamente na sua rede.</p>
+    
+    <h2>Recursos Principais</h2>
+    <div class="features">
+        <div class="feature">
+            <span class="feature-icon">📁</span>
+            <span>Armazenamento de arquivos na sua rede local</span>
+        </div>
+        <div class="feature">
+            <span class="feature-icon">🔒</span>
+            <span>Acesso seguro com autenticação</span>
+        </div>
+        <div class="feature">
+            <span class="feature-icon">🔗</span>
+            <span>Compartilhamento de arquivos com links</span>
+        </div>
+        <div class="feature">
+            <span class="feature-icon">📱</span>
+            <span>Interface responsiva para todos os dispositivos</span>
+        </div>
+        <div class="feature">
+            <span class="feature-icon">🔄</span>
+            <span>Sincronização entre dispositivos</span>
+        </div>
+        <div class="feature">
+            <span class="feature-icon">🚀</span>
+            <span>Uploads e downloads rápidos</span>
+        </div>
+    </div>
+    
+    <h2>Como Instalar</h2>
+    <h3>Pré-requisitos</h3>
+    <ul>
+        <li>Node.js</li>
+        <li>npm</li>
+    </ul>
+    
+    <h3>Instalação</h3>
+    <pre><code>git clone https://github.com/techlabs-ux/moo-drive.git
+cd moo-drive
+npm install</code></pre>
+    
+    <h3>Iniciar o Servidor</h3>
+    <pre><code>npm start</code></pre>
+    <p>O servidor estará disponível no IP do servidor na porta 1080</p>
+    
+    <h2>Como Usar</h2>
+    <div class="steps">
+        <div class="step">Acesse a interface web</div>
+        <div class="step">Crie uma conta ou faça login</div>
+        <div class="step">Comece a enviar seus arquivos</div>
+        <div class="step">Gerencie seus arquivos através da interface intuitiva</div>
+    </div>
+    
+    <h2>Desenvolvimento</h2>
+    <p>Para contribuir com o projeto:</p>
+    <div class="steps">
+        <div class="step">Faça um fork do repositório</div>
+        <div class="step">Crie uma branch para sua feature (<code>git checkout -b feature/incrivel</code>)</div>
+        <div class="step">Commit suas mudanças (<code>git commit -am 'Adiciona feature incrível'</code>)</div>
+        <div class="step">Push para a branch (<code>git push origin feature/incrivel</code>)</div>
+        <div class="step">Abra um Pull Request</div>
+    </div>
+    
+    <h2>Licença</h2>
+    <p>Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.</p>
+    
+    <div class="footer">
+        🐄 Moo Drive - Mantenha seus arquivos seguros na sua rede!
+    </div>
+</body>
+</html>
