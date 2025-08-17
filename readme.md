@@ -13,7 +13,7 @@ Moo Drive é um serviço de armazenamento em nuvem pessoal que permite você arm
 
 Pré-requisitos
 
-1. Node.js
+1. Node.js (v12)
 
 2. npm
 
@@ -57,3 +57,4 @@ Para contribuir com o projeto:
 Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para mais detalhes.
 
 # 🐄 Moo Drive - Mantenha seus arquivos seguros na sua rede!
+
